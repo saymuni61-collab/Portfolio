@@ -1,90 +1,484 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Saymun Islam - Portfolio</title>
-      <style>
-         body {
-         font-family: Arial, sans-serif;
-         margin: 0;
-         padding: 0;
-         line-height: 1.6;
-         background-color: #f4f4f9;
-         color: #333;
-         }
-         header {
-         background: #2c3e50;
-         color: #fff;
-         padding: 20px 0;
-         text-align: center;
-         }
-         header h1 {
-         margin: 0;
-         }
-         section {
-         padding: 20px;
-         max-width: 900px;
-         margin: auto;
-         }
-         h2 {
-         color: #2c3e50;
-         border-bottom: 2px solid #ddd;
-         padding-bottom: 5px;
-         }
-         ul {
-         list-style-type: square;
-         padding-left: 20px;
-         }
-         footer {
-         background: #2c3e50;
-         color: #fff;
-         text-align: center;
-         padding: 10px;
-         margin-top: 20px;
-         }
-      </style>
-   </head>
-   <body>
-      <header>
-         <h1>Saymun Islam</h1>
-         <p>Professional Portfolio</p>
-      </header>
-      <section id="introduction">
-         <h2>Introduction</h2>
-         <p>Hello, I am Saymun Islam. Welcome to my professional portfolio showcasing my education, experience, skills, and activities.</p>
-      </section>
-      <section id="education">
-         <h2>Education</h2>
-         <ul>
-            <li>Bachelor’s Degree (Ongoing/Completed)</li>
-            <li>Higher Secondary Certificate (HSC)</li>
-            <li>Secondary School Certificate (SSC)</li>
-         </ul>
-      </section>
-      <section id="experience">
-         <h2>Experience</h2>
-         <p>Currently working in the Marketing Department of a company, contributing to campaigns, promotions, and strategic initiatives.</p>
-      </section>
-      <section id="skills">
-         <h2>Skills</h2>
-         <ul>
-            <li>Marketing Strategy & Campaigns</li>
-            <li>Communication & Team Collaboration</li>
-            <li>Basic Accounting Knowledge</li>
-            <li>Web Development (HTML basics)</li>
-         </ul>
-      </section>
-      <section id="activities">
-         <h2>Extra-Curricular Activities</h2>
-         <ul>
-            <li>Participated in university cultural events</li>
-            <li>Volunteering in community initiatives</li>
-            <li>Interest in portfolio building and GitHub projects</li>
-         </ul>
-      </section>
-      <footer>
-         <p>&copy; 2026 Saymun Islam | All Rights Reserved</p>
-      </footer>
-   </body>
-</html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saymun Islam — Student &amp; Builder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#12181B;
+    --ink-soft:#8B9198;
+    --paper:#F7F4EC;
+    --line:#2A3338;
+    --ember:#E8A33D;
+    --teal:#4FA79E;
+    --max:1040px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--paper);
+    font-family:'IBM Plex Sans', sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  ::selection{ background:var(--ember); color:var(--ink); }
+
+  a{ color:inherit; }
+
+  :focus-visible{
+    outline:2px solid var(--ember);
+    outline-offset:3px;
+  }
+
+  .wrap{
+    max-width:var(--max);
+    margin:0 auto;
+    padding:0 28px;
+  }
+
+  /* ---------- Top bar ---------- */
+  header.topbar{
+    position:sticky; top:0; z-index:10;
+    background:rgba(18,24,27,0.88);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .topbar .wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-top:16px; padding-bottom:16px;
+  }
+  .mark{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:14px;
+    letter-spacing:0.06em;
+    color:var(--ember);
+  }
+  nav.topnav{ display:flex; gap:22px; }
+  nav.topnav a{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    text-decoration:none;
+    color:var(--ink-soft);
+    letter-spacing:0.03em;
+  }
+  nav.topnav a:hover{ color:var(--paper); }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    padding:96px 0 88px;
+    border-bottom:1px solid var(--line);
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    color:var(--teal);
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    margin:0 0 22px;
+  }
+  h1.name{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:clamp(46px, 8vw, 92px);
+    line-height:0.98;
+    margin:0 0 20px;
+    letter-spacing:-0.01em;
+  }
+  .hero .lede{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:clamp(19px, 2.4vw, 25px);
+    color:var(--paper);
+    max-width:640px;
+    margin:0 0 26px;
+  }
+  .hero .body-text{
+    max-width:560px;
+    color:var(--ink-soft);
+    font-size:16px;
+    margin:0 0 34px;
+  }
+  .contact-row{ display:flex; gap:14px; flex-wrap:wrap; align-items:center; }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    padding:11px 18px;
+    border:1px solid var(--ember);
+    color:var(--ember);
+    text-decoration:none;
+    border-radius:2px;
+    transition:background .15s ease, color .15s ease;
+  }
+  .btn:hover{ background:var(--ember); color:var(--ink); }
+  .tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    color:var(--ink-soft);
+    border:1px solid var(--line);
+    padding:8px 12px;
+    border-radius:2px;
+  }
+
+  /* ---------- Section shell ---------- */
+  section{
+    padding:76px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .sec-head{
+    display:flex;
+    align-items:baseline;
+    gap:16px;
+    margin-bottom:44px;
+  }
+  .sec-num{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    color:var(--ink-soft);
+  }
+  h2.sec-title{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:clamp(30px, 4vw, 40px);
+    margin:0;
+  }
+
+  /* ---------- Education / bracket signature ---------- */
+  .edu-grid{
+    display:grid;
+    grid-template-columns:auto 1fr;
+    gap:40px;
+    align-items:start;
+  }
+  .edu-note{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    color:var(--ink-soft);
+    max-width:180px;
+    padding-top:8px;
+  }
+  .bracket-wrap{
+    display:flex;
+    align-items:stretch;
+  }
+  .bracket-svg{
+    flex:0 0 auto;
+    width:34px;
+  }
+  .bracket-svg path{
+    fill:none;
+    stroke:var(--ember);
+    stroke-width:2;
+  }
+  .edu-list{
+    list-style:none;
+    margin:0; padding:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    gap:28px;
+  }
+  .edu-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:20px;
+    border-bottom:1px dashed var(--line);
+    padding-bottom:18px;
+  }
+  .edu-item:last-child{ border-bottom:none; }
+  .edu-level{
+    font-family:'Fraunces', serif;
+    font-size:22px;
+    font-weight:600;
+  }
+  .edu-inst{
+    color:var(--ink-soft);
+    font-size:14px;
+  }
+  .edu-status{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    white-space:nowrap;
+    padding:5px 10px;
+    border-radius:2px;
+    border:1px solid var(--line);
+    color:var(--ink-soft);
+  }
+  .edu-status.ongoing{
+    color:var(--teal);
+    border-color:var(--teal);
+  }
+
+  /* ---------- Work experience (empty state) ---------- */
+  .exp-empty{
+    border:1px dashed var(--line);
+    border-radius:2px;
+    padding:36px;
+  }
+  .exp-empty p.lead{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-size:19px;
+    margin:0 0 22px;
+    color:var(--paper);
+  }
+  ul.building{
+    list-style:none;
+    margin:0; padding:0;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+  ul.building li{
+    display:flex;
+    gap:12px;
+    font-size:15px;
+    color:var(--ink-soft);
+  }
+  ul.building li::before{
+    content:"—";
+    color:var(--ember);
+    flex:0 0 auto;
+  }
+
+  /* ---------- Skills ---------- */
+  .skill-group{ margin-bottom:34px; }
+  .skill-group:last-child{ margin-bottom:0; }
+  .skill-label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin:0 0 14px;
+  }
+  .chips{ display:flex; flex-wrap:wrap; gap:10px; }
+  .chip{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    padding:9px 14px;
+    border:1px solid var(--line);
+    border-radius:2px;
+    color:var(--paper);
+  }
+  .chip.accent{ border-color:var(--teal); color:var(--teal); }
+  .chip.ember{ border-color:var(--ember); color:var(--ember); }
+
+  /* ---------- Footer ---------- */
+  footer{
+    padding:48px 0 60px;
+  }
+  footer .wrap{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:16px;
+  }
+  footer .fline{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    color:var(--ink-soft);
+  }
+  footer a.email{
+    text-decoration:none;
+    border-bottom:1px solid var(--ember);
+    color:var(--paper);
+  }
+
+  @media (max-width: 700px){
+    nav.topnav{ display:none; }
+    .edu-grid{ grid-template-columns:1fr; }
+    .edu-note{ max-width:none; padding-top:0; }
+    .bracket-svg{ display:none; }
+    .edu-item{ flex-direction:column; align-items:flex-start; gap:8px; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    *{ animation:none !important; transition:none !important; }
+  }
+
+  .reveal{
+    opacity:0;
+    transform:translateY(14px);
+    transition:opacity .6s ease, transform .6s ease;
+  }
+  .reveal.in{ opacity:1; transform:translateY(0); }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <span class="mark">SI / index.html</span>
+    <nav class="topnav">
+      <a href="#intro">Introduction</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="intro">
+  <div class="wrap">
+    <p class="eyebrow">BBA Student · Green University of Bangladesh</p>
+    <h1 class="name">Saymun Islam</h1>
+    <p class="lede">Business student building a technical foundation — where strategy meets code.</p>
+    <p class="body-text">I am currently pursuing a Bachelor of Business Administration (BBA) at Green University of Bangladesh, Green Business School (GBS). Alongside my academic studies, I am developing practical skills in JavaScript, Python, and Artificial Intelligence, with a growing focus on web development. My goal is to combine a strong business foundation with technical capability to build solutions that are both strategic and functional.</p>
+    <div class="contact-row">
+      <a class="btn" href="mailto:saymunislam194@gmail.com">Say hello →</a>
+      <a class="btn" href="https://www.linkedin.com/in/saymun-islam-ab6120405" target="_blank" rel="noopener">LinkedIn →</a>
+      <span class="tag">saymunislam194@gmail.com</span>
+      <span class="tag">JavaScript</span>
+      <span class="tag">Python</span>
+      <span class="tag">AI</span>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">01</span>
+      <h2 class="sec-title">Education</h2>
+    </div>
+    <div class="edu-grid">
+      <p class="edu-note">Academic path, in order —</p>
+      <div class="bracket-wrap">
+        <svg class="bracket-svg" viewBox="0 0 34 220" preserveAspectRatio="none">
+          <path d="M 26 4 L 8 4 L 8 216 L 26 216 M 8 110 L 20 110"/>
+        </svg>
+        <ul class="edu-list">
+          <li class="edu-item">
+            <span>
+              <span class="edu-level">Varsity</span><br>
+              <span class="edu-inst">Green University of Bangladesh · Green Business School (GBS) · BBA</span>
+            </span>
+            <span class="edu-status ongoing">In progress</span>
+          </li>
+          <li class="edu-item">
+            <span>
+              <span class="edu-level">HSC</span><br>
+              <span class="edu-inst">Narsingdi Government College · Business Studies · GPA 4.42</span>
+            </span>
+            <span class="edu-status">2024</span>
+          </li>
+          <li class="edu-item">
+            <span>
+              <span class="edu-level">SSC</span><br>
+              <span class="edu-inst">Madhabdi S.P Institution · Business Studies · GPA 4.39</span>
+            </span>
+            <span class="edu-status">2022</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">02</span>
+      <h2 class="sec-title">Work Experience</h2>
+    </div>
+    <ul class="edu-list" style="margin-bottom:36px;">
+      <li class="edu-item" style="flex-direction:column; align-items:flex-start; gap:14px;">
+        <span style="display:flex; justify-content:space-between; width:100%; gap:20px;">
+          <span>
+            <span class="edu-level">Assistant Manager</span><br>
+            <span class="edu-inst">R.S Textile Mills</span>
+          </span>
+          <span class="edu-status">Oct 2025 – May 2026</span>
+        </span>
+        <ul class="building" style="margin-top:2px;">
+          <li>Supervised and guided a team of 20 workers, providing clear direction on daily tasks</li>
+          <li>Maintained office accounts and kept financial records up to date</li>
+        </ul>
+      </li>
+    </ul>
+    <div class="exp-empty">
+      <p class="lead">Alongside that, I keep building on the technical side.</p>
+      <ul class="building">
+        <li>Practicing JavaScript and Python through small, self-directed projects</li>
+        <li>Exploring how AI tools fit into modern web development</li>
+        <li>Applying business studies from BBA to real workplace decisions</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">03</span>
+      <h2 class="sec-title">Skills</h2>
+    </div>
+
+    <div class="skill-group">
+      <p class="skill-label">Languages</p>
+      <div class="chips">
+        <span class="chip">JavaScript</span>
+        <span class="chip">Python</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <p class="skill-label">Focus areas</p>
+      <div class="chips">
+        <span class="chip accent">AI</span>
+        <span class="chip accent">Web Development</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <p class="skill-label">Beyond code</p>
+      <div class="chips">
+        <span class="chip ember">Business &amp; startups</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="fline">Built line by line.</span>
+    <div style="display:flex; gap:20px; align-items:center;">
+      <a class="email" href="https://www.linkedin.com/in/saymun-islam-ab6120405" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="email" href="mailto:saymunislam194@gmail.com">saymunislam194@gmail.com</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const els = document.querySelectorAll('.hero, section');
+  els.forEach(el => el.classList.add('reveal'));
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  els.forEach(el => io.observe(el));
+</script>
+
+</body>
+               </html>
+   
